@@ -16,7 +16,8 @@
   --page-title-color: #ffffff;
   --btn-text-color: #ffffff;
 
-  --grid-gap: 24px;
+  --grid-column-gap: 24px;
+  --grid-row-gap: 48px;
 
   /*? пересмотреть название переменной  */
   --card-radius: 4px;
@@ -92,11 +93,14 @@ ul {
   align-items: center;
 }
 
+.page-header .logo {
+  margin-right: 76px;
+}
+
 /* Main nav */
 .main-nav {
   display: flex;
   align-items: center;
-  column-gap: 76px;
 }
 
 /* Logo */
@@ -132,7 +136,7 @@ ul {
 /* Site nav */
 .site-nav {
   display: flex;
-  column-gap: 40px;
+  gap: 40px;
 }
 
 .site-nav .link {
@@ -151,10 +155,12 @@ ul {
 
 /* Contacts */
 .contacts {
-  display: flex;
-  column-gap: 40px;
-
   font-style: normal;
+}
+
+.contact-list {
+  display: flex;
+  gap: 40px;
 }
 
 .contacts-link {
@@ -171,16 +177,18 @@ ul {
 
 /* Hero */
 .hero {
-  padding: 188px 0;
+  padding-top: 188px;
+  padding-bottom: 188px;
 
-  text-align: center;
+  /* text-align: center; */
 
   background-color: var(--hero-background-color);
 }
 
 /* Page title */
 .page-title {
-  margin-bottom: 48px;
+  max-width: 496px;
+  margin: 0 auto 48px;
 
   font-size: 56px;
   line-height: 1.07;
@@ -192,8 +200,10 @@ ul {
 
 /* Button */
 .button {
-  display: inline-flex;
+  display: block;
+  min-width: 169px;
   padding: 16px 32px;
+  margin: 0 auto;
 
   font-weight: 500;
   line-height: 1.5;
@@ -246,11 +256,11 @@ ul {
 /* Features */
 .feature-list {
   display: flex;
-  gap: var(--grid-gap);
+  gap: var(--grid-column-gap);
 }
 
 .feature-list > .item {
-  flex-basis: calc((100% - 3 * var(--grid-gap)) / 4);
+  flex-basis: calc((100% - 3 * var(--grid-column-gap)) / 4);
 }
 
 /* Team */
@@ -260,11 +270,11 @@ ul {
 
 .team-list {
   display: flex;
-  gap: var(--grid-gap);
+  gap: var(--grid-column-gap);
 }
 
 .team-list > .item {
-  flex-basis: calc((100% - 3 * var(--grid-gap)) / 4);
+  flex-basis: calc((100% - 3 * var(--grid-column-gap)) / 4);
 
   text-align: center;
 
@@ -274,18 +284,19 @@ ul {
 }
 
 .team-list .card-content {
-  padding: 32px 16px;
+  padding: 32px 0;
 }
 
-/* Works */
+/* Portfolio works */
 .work-list {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--grid-gap);
+  column-gap: var(--grid-column-gap);
+  row-gap: var(--grid-row-gap);
 }
 
 .work-list > .item {
-  flex-basis: calc((100% - 2 * var(--grid-gap)) / 3);
+  flex-basis: calc((100% - 2 * var(--grid-column-gap)) / 3);
 
   background-color: var(--white-background-color);
 }
