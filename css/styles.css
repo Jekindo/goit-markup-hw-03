@@ -316,14 +316,12 @@ ul {
   background-color: var(--footer-background-color);
 }
 
-.page-footer .brand-info {
-  max-width: 264px;
-}
-
 .page-footer .logo {
   margin-bottom: 16px;
 }
 
 .page-footer .text {
+  max-width: 264px;
+
   color: var(--light-color);
 }
